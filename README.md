@@ -1,72 +1,60 @@
-# Flappy Bird 🐤
+# Flappy Bird
 
-A polished, browser-based Flappy Bird–style arcade flyer. Guide a little bird
-through gaps between pipes — tap, click, or press Space to flap. Built with pure
-HTML, CSS, and JavaScript on the Canvas API. No engine, no assets, no backend.
+A polished, browser-based Flappy Bird–style arcade game. Fly a little bird
+through the gaps between pipes for as long as you can. Pure HTML, CSS, and
+JavaScript on the Canvas — no engine, no libraries, no backend.
 
 ## Features
 
-- 🎮 Smooth, frame-rate-independent physics (delta-time game loop)
-- 🟢 Clean procedurally-drawn bird, pipes, clouds, and scrolling ground — all
-  original shapes, no copyrighted art
-- 📈 Gradual difficulty ramp: pipes speed up and gaps narrow as your score climbs
-- 🎯 Accurate circle-vs-rectangle collision detection
-- 🏆 High score saved in `localStorage` and shown on the start/game-over screens
-- 📱 Fully responsive — one virtual resolution scaled crisply to any screen (Retina aware)
-- ✨ Arcade-style start screen, live HUD, and game-over screen with a "New Best!" flourish
+- **Pixel-art rendering** — the scene is drawn to a low-res buffer and upscaled with no smoothing for a crisp retro look
+- **Arcade cabinet UI** — neon marquee, CRT screen, and control deck set in a synthwave arcade room
+- **Smooth physics** — frame-rate-independent (delta-time) movement and collision
+- **Money trail** — the bird drops a stream of spinning gold coins as it flies
+- **Rising difficulty** — pipes speed up and gaps narrow as your score climbs
+- **High score** — saved to `localStorage` between sessions
+- **Responsive** — scales cleanly to any screen, desktop or mobile
+- **Original art** — every shape is drawn in code; no copyrighted assets
 
 ## Controls
 
 | Action | Input |
 | ------ | ----- |
-| Flap   | `Space` key |
-| Flap   | Mouse click |
-| Flap   | Touch tap (mobile) |
-| Start / Restart | On-screen button (or flap on the start screen) |
+| Flap   | `Space` · click · tap |
+| Start  | `Space` or the **Start** button |
+| Replay | `Space` or the **Play Again** button |
 
-## How to run locally
+## Run locally
 
-No build step, no dependencies. Just open the file:
+No build step. Just open `index.html` in a browser.
 
 ```bash
-# from the project folder
-open index.html        # macOS
-# or double-click index.html in your file explorer
+open index.html          # macOS
 ```
 
-Optionally serve it (handy on mobile or to avoid any file:// quirks):
+Or serve it (recommended on mobile):
 
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python3 -m http.server 8000     # then visit http://localhost:8000
 ```
 
 ## Tech stack
 
-- **HTML** — markup and overlay screens
-- **CSS** — arcade UI, responsive stage, animations
-- **JavaScript** — game loop, physics, rendering, input, persistence
-- **Canvas 2D API** — all in-game rendering
-- No backend, no external libraries, no paid APIs
+`HTML` · `CSS` · `JavaScript` · `Canvas 2D` — no dependencies.
 
-## Project structure
+## Structure
 
 ```
-flappybird/
-  index.html   # page structure + screens
-  style.css    # arcade styling and layout
-  script.js    # game engine and logic
-  README.md
+index.html   # page + overlay screens
+style.css    # arcade UI and layout
+script.js    # game loop, physics, rendering
 ```
 
 ## Screenshots
 
-> Add your own captures here.
-
-| Start screen | In game | Game over |
-| ------------ | ------- | --------- |
-| _(screenshot)_ | _(screenshot)_ | _(screenshot)_ |
+| Start | In game | Game over |
+| :---: | :-----: | :-------: |
+| _add image_ | _add image_ | _add image_ |
 
 ## License
 
-Original code and art. Free to use and modify.
+Original code and art — free to use and modify.

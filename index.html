@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#4ec0e0" />
+  <title>Flappy Bird — Arcade Flyer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Floating neon light orbs in the arcade room -->
+    <div class="orbs" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <div class="cabinet">
+      <!-- Glowing marquee on top of the cabinet -->
+      <div class="marquee">
+        <span class="marquee-title">FLAPPY<em>BIRD</em></span>
+        <span class="marquee-sub">ARCADE FLYER</span>
+      </div>
+
+      <!-- The bezel houses the CRT screen -->
+      <div class="bezel">
+        <div class="stage">
+          <canvas id="game"></canvas>
+          <div class="crt"></div>
+
+      <!-- HUD score shown during play -->
+      <div id="hud" class="hud hidden">
+        <span id="hudScore">0</span>
+      </div>
+
+      <!-- Start screen -->
+      <div id="startScreen" class="screen">
+        <div class="panel">
+          <h1 class="logo">Flappy<span>Bird</span></h1>
+          <p class="tagline">Tap, click, or press Space to fly</p>
+          <button id="startBtn" class="btn btn-primary">Start</button>
+          <p class="best">Best: <span id="startBest">0</span></p>
+        </div>
+      </div>
+
+      <!-- Game over screen -->
+      <div id="overScreen" class="screen hidden">
+        <div class="panel">
+          <h2 class="over-title">Game Over</h2>
+          <div class="scores">
+            <div class="score-block">
+              <span class="score-label">Score</span>
+              <span id="finalScore" class="score-value">0</span>
+            </div>
+            <div class="score-block">
+              <span class="score-label">Best</span>
+              <span id="bestScore" class="score-value">0</span>
+            </div>
+          </div>
+          <p id="newBest" class="new-best hidden">New Best!</p>
+          <button id="restartBtn" class="btn btn-primary">Play Again</button>
+          <p class="best">Press Space to replay</p>
+        </div>
+      </div>
+        </div>
+      </div>
+
+      <!-- Control deck: decorative joystick + buttons -->
+      <div class="deck">
+        <div class="joystick">
+          <span class="stick"></span>
+        </div>
+        <div class="deck-hint">SPACE&nbsp;/&nbsp;CLICK&nbsp;/&nbsp;TAP&nbsp;TO&nbsp;FLAP</div>
+        <div class="deck-buttons">
+          <span class="ab a"></span>
+          <span class="ab b"></span>
+        </div>
+      </div>
+
+      <!-- Cabinet vents -->
+      <div class="vents"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

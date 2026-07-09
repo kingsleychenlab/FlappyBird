@@ -49,12 +49,6 @@ style.css    # arcade UI and layout
 script.js    # game loop, physics, rendering
 ```
 
-## Screenshots
-
-| Start | In game | Game over |
-| :---: | :-----: | :-------: |
-| _add image_ | _add image_ | _add image_ |
-
 ## License
 
 Original code and art — free to use and modify.
